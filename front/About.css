@@ -1,0 +1,239 @@
+/* Global Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1B1E3A; /* Slightly lighter than original theme */
+    color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+/* About Section Styling */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.about-title {
+    text-align: center;
+    font-size: 3rem;
+    color: #F4F4F4;
+    margin-bottom: 30px;
+    animation: slideDown 1s ease-in-out;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about-section {
+    background: #222548;
+    border-radius: 8px;
+    padding: 20px 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: scaleIn 1s ease-in-out;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    color: #A5D8FF;
+    margin-bottom: 15px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.about-section p,
+.about-section ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #E0E0E0;
+    animation: slideLeft 1s ease-in-out;
+}
+
+.about-section ul li {
+    margin-bottom: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* Global Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1E1E2F; /* Lightened theme color */
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+/* Section Container */
+.challenges-section {
+    padding: 50px 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Titles and Texts */
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #FFD700;
+    margin-bottom: 30px;
+    animation: slideDown 1s ease-in-out;
+}
+
+.section-subtitle {
+    font-size: 1.8rem;
+    margin: 20px 0;
+    color: #A5D8FF;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.section-intro {
+    text-align: justify;
+    margin-bottom: 20px;
+    animation: slideLeft 1s ease-in-out;
+}
+
+/* Challenges List */
+.challenge-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.challenge-item {
+    background: #222548;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: scaleIn 1s ease-in-out;
+}
+
+.challenge-item h2 {
+    color: #A5D8FF;
+    margin-bottom: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.challenge-item p {
+    color: #E0E0E0;
+    animation: slideRight 1s ease-in-out;
+}
+
+/* Values List */
+.value-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.value-list li {
+    margin: 10px 0;
+    color: #E0E0E0;
+    padding-left: 10px;
+    border-left: 3px solid #FFD700;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

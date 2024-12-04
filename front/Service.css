@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+}
+
+.services-section {
+    padding: 40px;
+    background: linear-gradient(to right, #ffffff, #f2f2f2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #444;
+    margin-bottom: 20px;
+    animation: slideDown 1.2s ease-in-out;
+}
+
+.content {
+    max-width: 900px;
+    margin: auto;
+    animation: fadeInUp 1.5s ease;
+}
+
+.service {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease;
+}
+
+.service h2 {
+    font-size: 1.5rem;
+    color: #222;
+}
+
+.service p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.animated {
+    font-style: italic;
+    color: #444;
+    margin-bottom: 20px;
+    animation: slideLeft 2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f2f4f5;
+    color: #333;
+}
+
+.services-section {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #e9f8ff, #f4e8f7);
+    animation: fadeIn 1.5s ease;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #3b3f4f;
+    margin-bottom: 30px;
+    animation: slideInDown 1.2s ease;
+}
+
+.content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.service {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1.5s ease;
+}
+
+.service h2 {
+    color: #444;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.service ul {
+    margin: 0;
+    padding: 0 20px;
+    list-style: disc;
+}
+
+.service li {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

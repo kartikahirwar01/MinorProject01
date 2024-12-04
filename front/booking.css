@@ -1,0 +1,85 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #070E3B; /* Background color */
+    color: white;
+}
+
+/* Booking Form Container */
+.booking-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Form Styles */
+.booking-form-container form {
+    background-color: #070E3B;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    text-align: center;
+    animation: slideIn 0.5s ease forwards;
+}
+
+.booking-form-container form label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #E0E0E0;
+}
+
+.booking-form-container form input,
+.booking-form-container form select {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background-color: #1A2430;
+    color: white;
+}
+
+.booking-form-container form button {
+    padding: 10px 20px;
+    background-color: #00FFFF;
+    color: #070E3B;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.booking-form-container form button:hover {
+    background-color: #00b3b3;
+}
+
+#success-msg {
+    margin-top: 10px;
+    font-size: 16px;
+    color: green;
+    font-weight: bold;
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none;
+}

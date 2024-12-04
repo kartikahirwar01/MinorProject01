@@ -1,0 +1,260 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #070E3B;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #08194C;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.navbar .nav-links li {
+    margin: 0 10px;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.navbar .nav-links li a:hover {
+    background: #1C2C6F;
+    color: #ffffff;
+}
+
+.navbar .login-btn {
+    padding: 10px 20px;
+    background: #1C2C6F;
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.home-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.home-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.home-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.home-section .explore-btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    background: #1C2C6F;
+    color: #ffffff;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Explore Section */
+.explore-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    margin-top: 100px;
+    min-height: 100vh;
+}
+
+.explore-section .content {
+    flex: 1;
+    padding: 20px;
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+.explore-section .content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.explore-section .content ul {
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.explore-section .content ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.explore-section .content ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #1C2C6F;
+}
+
+.explore-section .image {
+    flex: 1;
+    text-align: center;
+}
+
+.explore-section .image img {
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInRight 1.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slider Container */
+.image-slider {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    height: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background-color: #070E3B;
+}
+
+/* Slide Container */
+.slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Individual Slide */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    text-align: center;
+}
+
+/* Images in the Slide */
+.slide img {
+    width: 100%; /* Full Width */
+    height: 100%; /* Full Height */
+    object-fit: cover; /* Ensures the image covers the entire area */
+    object-position: center; /* Centers the image */
+    border-radius: 15px; /* Optional for rounded corners */
+}
+
+/* Display First Slide */
+.slide:first-child {
+    display: block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Animation Classes */
+.fade {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.slide-left {
+    animation: slideLeft 2s ease-in-out;
+}
+
+.zoom {
+    animation: zoomIn 2s ease-in-out;
+}

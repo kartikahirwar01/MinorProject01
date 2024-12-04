@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goods Transport</title>
+    <link rel="stylesheet" href="../front/login.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Goods Transport</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="Service.html">Services</a></li>
+          <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    <a href="index.html"><button class="login-btn">LogOut</button></a>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="home-section" id="home">
+        <h1>Welcome to Goods Transport</h1>
+        <p>Explore our platform to manage and track your transportation needs with ease.</p>
+        <a href="explore .html"><button class="explore-btn">Explore Now</button></a>
+    </section>
+
+    <section class="why-us" id="why-us">
+        <div class="content">
+            <h2 id="typewriter"></h2>
+            <p>
+                Fast, secure, and reliable goods transport services tailored to meet your needs. 
+                Enjoy real-time tracking and hassle-free logistics solutions.
+            </p>
+            <p>
+                Competitive pricing, verified transporters, and user-friendly features make 
+                us the best choice for your transport needs.
+            </p>
+        </div>
+        <div class="image">
+            <div class="slider">
+                <img src="../front/aspect/goods_trans.jpg" alt="Fast Transport">
+                <img src="../front/aspect/Truck-Transport_Srvices.jpg" alt="Secure Logistics">
+                <img src="../front/aspect/moving-service-with-truck-boxes-furniture-transportation-mover-service-concept-furniture-transportation-moving-boxes-mover-service-truck-rental-household-relocation_864588-198236.avif" alt="Reliable Service">
+            </div>
+        </div>
+    </section>
+    
+    <section class="our-features" id="our-features">
+        <div class="content">
+            <h2 id="features-typewriter"></h2>
+            <p>
+                Our transport services include seamless logistics management, fast deliveries, and secure handling.
+            </p>
+            <p>
+                With us, you can count on punctual deliveries and excellent customer support.
+            </p>
+        </div>
+        <div class="image">
+            <img src="../front/aspect/istockphoto-946210052-612x612.jpg" alt="Goods Transport Image">
+        </div>
+    </section>
+
+     <!-- Booking Section -->
+     <section id="booking-section">
+        <div class="content">
+            <h2>Book Your Transport Now</h2>
+            <p>Get your goods delivered securely with our reliable transport service.</p>
+            <a href="booking.html"><button id="booking-btn">Book Now</button></a>
+        </div>
+
+   </section>
+    
+
+   <section class="location-feeder">
+    <div id="map"></div>
+    <div class="location-content">
+        <h2>Explore Bhopal</h2>
+        <p>Welcome to Bhopal, the City of Lakes. Explore various places to visit, enjoy the rich culture, and book your transport services now!</p>
+       <a href="booking.html"> <button onclick="openBookingForm()">Book Now</button></a>
+    </div>
+</section>
+
+<div id="booking-form" class="hidden">
+    <!-- Add your booking form content here -->
+    <h3>Booking Form</h3>
+    <!-- Booking form inputs -->
+</div>
+
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <p>© 2024 Goods Transport. All rights reserved.</p>
+
+            <!-- Footer Links -->
+            <div class="footer-links">
+                <a href="About.html" class="footer-link">About Us</a>
+                <a href="Service.html" class="footer-link">Services</a>
+                <a href="Contact.html" class="footer-link">Contact</a>
+                <a href="PrivacyPolicy.html" class="footer-link">Privacy Policy</a>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <a href="https://www.instagram.com" target="_blank" class="social-icon" id="instagram">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1024px-Instagram_logo_2022.svg.png" alt="Instagram" class="social-logo">
+                </a>
+                <a href="https://www.facebook.com" target="_blank" class="social-icon" id="facebook">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1024px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook" class="social-logo">
+                </a>
+             
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    <script>
+        // Add smooth scrolling for nav links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+    const text = "Why Choose Our Goods Transport Service?";
+    const typewriter = document.getElementById("typewriter");
+    let index = 0;
+
+    function typeEffect() {
+        if (index < text.length) {
+            typewriter.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeEffect, 50); // Adjust speed here
+        }
+    }
+
+    typeEffect();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const text = "Why Choose Our Goods Transport Services?";
+    const typewriter = document.getElementById("features-typewriter");
+    let index = 0;
+
+    function typeEffect() {
+        if (index < text.length) {
+            typewriter.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeEffect, 100); // Adjust speed here
+        }
+    }
+
+    typeEffect();
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const bookingBtn = document.getElementById('booking-btn');
+    const bookingFormContainer = document.getElementById('booking-form-container');
+    const bookingForm = document.getElementById('booking-form');
+    const successMsg = document.getElementById('success-msg');
+    
+    // Toggle Booking Form
+    bookingBtn.addEventListener('click', function() {
+        bookingFormContainer.classList.toggle('hidden');
+        if (!bookingFormContainer.classList.contains('hidden')) {
+            // Form is now visible, so focus on the first input
+            document.getElementById('pickup-location').focus();
+        }
+    });
+
+    // Handle Booking Form Submission
+    bookingForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Show success message after form submission
+        successMsg.style.display = 'block';
+        setTimeout(function() {
+            successMsg.style.display = 'none';
+            bookingForm.reset(); // Reset form fields
+            bookingFormContainer.classList.add('hidden'); // Hide form again
+        }, 3000); // Hide success message after 3 seconds
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize the map
+    var map = L.map('map').setView([23.2599, 77.4126], 13); // Coordinates for Bhopal
+
+    // Add OpenStreetMap tiles (free tiles from OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Add a marker to the map for Bhopal
+    L.marker([23.2599, 77.4126]).addTo(map)
+        .bindPopup('<b>Bhopal</b><br>City of Lakes')
+        .openPopup();
+});
+
+
+    </script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</body>
+</html>

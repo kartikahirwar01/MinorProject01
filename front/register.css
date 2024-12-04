@@ -1,0 +1,69 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #070E3B; /* Background Color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    margin: 0;
+}
+
+/* Registration Container */
+.register-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out; /* Fade-in Animation */
+}
+
+/* Heading */
+.register-container h2 {
+    color: #070E3B;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Input Fields */
+.register-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #070E3B;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+/* Focus effect for input fields */
+.register-container input:focus {
+    border-color: #FFD700; /* Gold Border on Focus */
+    outline: none;
+}
+
+/* Submit Button */
+.register-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #070E3B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-container button:hover {
+    background-color:

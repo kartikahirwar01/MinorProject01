@@ -1,0 +1,658 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #070E3B;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #08194C;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.navbar .nav-links li {
+    margin: 0 10px;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    background: #1C2C6F;
+    color: #ffffff;
+}
+
+.navbar .login-btn {
+    padding: 10px 20px;
+    background: #1C2C6F;
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.navbar .login-btn:hover {
+    background: #29457F;
+}
+
+/* Hero Section */
+.home-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.home-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.home-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.home-section .explore-btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    background: #1C2C6F;
+    color: #ffffff;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+    animation: slideUp 1.5s ease-in-out;
+}
+
+.home-section .explore-btn:hover {
+    background: #29457F;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* 
+why use  */
+
+/* General Section Styles */
+.why-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:white; /* Background color */
+    color: 070E3B;
+    padding: 50px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.why-us:hover {
+    transform: scale(1.03); /* Slight zoom effect */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Content Section */
+.why-us .content {
+    flex: 1;
+    margin-right: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.why-us .content h2 {
+    font-size: 36px;
+    color: #070E3B; /* Aqua color */
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.7);
+}
+
+.why-us .content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: black;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.why-us:hover .content p {
+    animation: slideInFromBottom 1s ease-in-out forwards;
+}
+
+/* Image Section */
+.why-us .image {
+    flex: 1;
+    overflow: hidden;
+    animation: slideInFromRight 2s ease-in-out;
+}
+
+.why-us .image .slider {
+    display: flex;
+    animation: slideImages 9s infinite; /* Continuous slider animation */
+}
+
+.why-us .image .slider img {
+    width: 100%;
+    margin-right: 10px;
+    border-radius: 10px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.why-us:hover .image .slider img {
+    transform: scale(1.05); /* Zoom effect */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideImages {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+
+/* our feature  */
+
+/* General Section Styles */
+.our-features {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000940; /* Background color */
+    color: white;
+    padding: 50px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.our-features:hover {
+    transform: scale(1.03); /* Slight zoom effect */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Content Section */
+.our-features .content {
+    flex: 1;
+    margin-right: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.our-features .content h2 {
+    font-size: 36px;
+    color: white; /* Aqua color */
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.7);
+}
+
+.our-features .content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #E0E0E0;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.our-features:hover .content p {
+    animation: slideInFromBottom 1s ease-in-out forwards;
+}
+
+/* Image Section */
+.our-features .image {
+    flex: 1;
+    overflow: hidden;
+    opacity: 0;
+    animation: slideInFromRight 2s ease-in-out;
+}
+
+.our-features .image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 
+Booking  */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #070E3B; /* Background color */
+    color: white;
+}
+
+/* Booking Section */
+#booking-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+}
+
+/* Content */
+.content {
+    margin-bottom: 30px;
+}
+
+.content h2 {
+    font-size: 36px;
+    color: #070E3B; /* Aqua color */
+    margin-bottom: 15px;
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.7);
+}
+
+.content p {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+#booking-btn {
+    padding: 10px 20px;
+    background-color: #070E3B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#booking-btn:hover {
+    background-color: #00b3b3;
+}
+
+/* Booking Form */
+.booking-form-container {
+    display: none; /* Initially hidden */
+    background-color: #070E3B;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    margin-top: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease forwards;
+}
+
+.booking-form-container input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.booking-form-container button {
+    padding: 10px 20px;
+    background-color: #00FFFF;
+    color: #070E3B;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.booking-form-container button:hover {
+    background-color: #00b3b3;
+}
+
+#success-msg {
+    margin-top: 10px;
+    font-size: 16px;
+    color: green;
+    font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* 
+location */
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #070E3B; /* Background color */
+    color: white;
+}
+
+/* Location Feeder Section */
+.location-feeder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 20px;
+}
+
+#map {
+    width: 60%;
+    height: 100%; /* Set the height to 100% of the container */
+    border-radius: 10px;
+}
+
+.location-content {
+    width: 35%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    animation: slideIn 1s ease-out;
+}
+
+.location-content h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.location-content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.location-content button {
+    padding: 10px 20px;
+    background-color: #00FFFF;
+    color: #070E3B;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.location-content button:hover {
+    background-color: #00b3b3;
+}
+
+/* Slide-in animation for content */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Hidden Booking Form */
+#booking-form {
+    display: none;
+    padding: 20px;
+    background-color: #070E3B;
+    border-radius: 10px;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+#success-msg {
+    color: #00FF00;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+
+/* General footer styles */
+footer {
+    background-color:#070E3B ;
+    color: white; /* Text color */
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+}
+
+/* Footer Container */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer Content */
+.footer-content p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Footer Links */
+.footer-links {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin: 0 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-link:hover {
+    transform: scale(1.1); /* Zoom effect */
+    color: #FF6347; /* Change text color on hover */
+}
+
+/* Social Media Icons Styling */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover Animation for Social Media Icons */
+.social-icon:hover img {
+    transform: scale(1.1); /* Zoom effect */
+    opacity: 0.8; /* Slight transparency */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-link {
+        margin: 10px 0;
+    }
+
+    .social-media {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.hidden {
+    display: none;
+    color: red;
+}
+
+
+
+/* Ensure icons are visible */
+.social-icon {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+.social-logo {
+    width: 40px; /* Adjust width as needed */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-logo:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}

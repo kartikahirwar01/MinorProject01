@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goods Transport</title>
+    <link rel="stylesheet" href="../front/index.css">
+</head>
+<body>
+    <div class="home-container">
+        <h1>Welcome to Goods Transport</h1>
+        <div class="button-group">
+            <button id="login-btn">Login</button>
+            <button id="register-btn">Register</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('login-btn').onclick = function() {
+            window.location.href = 'loginform.html';
+        };
+
+        document.getElementById('register-btn').onclick = function() {
+            window.location.href = 'registrationform.html';
+        };
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>

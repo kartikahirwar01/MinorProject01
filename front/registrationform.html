@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../front/register.css">
+</head>
+<body>
+    <div class="register-container">
+        <h2>Register</h2>
+        <form id="register-form">
+            <input type="text" id="fullname" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script>
+        // Check if user is already logged in
+window.onload = function() {
+    const user = localStorage.getItem('user');
+    if (user) {
+        alert("You are already registered. Please log in.");
+        window.location.href = 'loginform.html'; // Redirect to login page if already registered
+    }
+}
+
+// Handle registration form submission
+document.getElementById('register-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Get form values
+    const fullname = document.getElementById('fullname').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const phone = document.getElementById('phone').value;
+
+    // Create user object
+    const user = {
+        fullname: fullname,
+        email: email,
+        password: password,
+        phone: phone
+    };
+
+    // Store user in local storage
+    localStorage.setItem('user', JSON.stringify(user));
+
+    // Redirect to login page after successful registration
+    alert("Registration successful! Please log in.");
+    window.location.href = 'loginform.html'; 
+});
+
+    </script>
+</body>
+</html>

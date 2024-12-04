@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goods Transport - Booking Form</title>
+    <link rel="stylesheet" href="../front/booking.css">
+</head>
+<body>
+    <div class="booking-form-container">
+        <form id="booking-form">
+            <h3>Booking Form</h3>
+            
+            <label for="pickup-location">Pickup Location:</label>
+            <input type="text" id="pickup-location" list="location-suggestions" placeholder="Enter Pickup Location" required>
+            <datalist id="location-suggestions">
+                <option value="New York">
+                <option value="Los Angeles">
+                <option value="Chicago">
+                <option value="San Francisco">
+                <option value="Miami">
+                <option value="Dallas">
+                <option value="Houston">
+                <option value="Atlanta">
+                <option value="Seattle">
+                <option value="Boston">
+                <!-- Add more location options here -->
+            </datalist>
+            
+            <label for="delivery-location">Delivery Location:</label>
+            <input type="text" id="delivery-location" list="location-suggestions" placeholder="Enter Delivery Location" required>
+            <datalist id="location-suggestions">
+                <option value="New York">
+                <option value="Los Angeles">
+                <option value="Chicago">
+                <option value="San Francisco">
+                <option value="Miami">
+                <option value="Dallas">
+                <option value="Houston">
+                <option value="Atlanta">
+                <option value="Seattle">
+                <option value="Boston">
+                <!-- Add more location options here -->
+            </datalist>
+            
+            <label for="delivery-date">Delivery Date:</label>
+            <input type="date" id="delivery-date" required>
+            
+            <label for="payment-mode">Payment Mode:</label>
+            <select id="payment-mode" required>
+                <option value="paytm">Paytm</option>
+                <option value="phonepe">PhonePe</option>
+                <option value="googlepay">Google Pay</option>
+                <option value="debitcard">Debit Card</option>
+                <option value="creditcard">Credit Card</option>
+            </select>
+            
+            <button type="submit">Submit</button>
+            <p id="success-msg" class="hidden">Booking Successful!</p>
+        </form>
+    </div>
+
+    <script src="../front/booking.js"></script>
+</body>
+</html>

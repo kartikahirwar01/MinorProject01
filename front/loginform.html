@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../front/loginform.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p id="error-msg" class="hidden">Invalid credentials. Please try again.</p>
+    </div>
+    
+    <script>
+        // Handle login form submission
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Get login form values
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Get user from local storage
+    const storedUser = localStorage.getItem('user');
+
+    if (storedUser) {
+        const user = JSON.parse(storedUser);
+
+        // Check if credentials match
+        if ((username === user.email || username === user.phone) && password === user.password) {
+            alert("Login successful! Welcome " + user.fullname);
+            // Redirect to a different page after successful login
+            window.location.href = '../front/dashboard.html'; 
+        } else {
+            // Display error message
+            const errorMsg = document.getElementById('error-msg');
+            errorMsg.textContent = "Invalid credentials. Please try again.";
+            errorMsg.classList.remove('hidden');
+        }
+    } else {
+        alert("No registered user found. Please register first.");
+        window.location.href = '../front/register.html'; // Redirect to registration page
+    }
+});
+
+    </script>
+</body>
+</html>

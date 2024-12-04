@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Goods Transport</title>
+    <link rel="stylesheet" href="../front/explore.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Goods Transport</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Service.html">Services</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <a href="index.html"><button class="login-btn">LogOut</button></a>
+    </nav>
+
+    <!-- Explore Section -->
+    <section class="explore-section">
+        <div class="content">
+            <h2>Explore Our Services</h2>
+            <p>
+                Discover the most efficient way to manage your goods transportation needs. 
+                Our platform provides reliable services, real-time tracking, and complete transparency.
+            </p>
+            <ul>
+                <li>Real-Time Tracking</li>
+                <li>Affordable Pricing</li>
+                <li>Trusted Network</li>
+            </ul>
+        </div>
+        <div class="image-slider">
+            <div class="slides">
+                <div class="slide fade">
+                    <img src="../front/aspect/goods_trans.jpg" alt="Goods Transport 1">
+                </div>
+                <div class="slide slide-left">
+                    <img src="../front/aspect/moving-service-with-truck-boxes-furniture-transportation-mover-service-concept-furniture-transportation-moving-boxes-mover-service-truck-rental-household-relocation_864588-198236.avif" alt="Goods Transport 2">
+                </div>
+                <div class="slide zoom">
+                    <img src="../front/aspect/Truck-Transport_Srvices.jpg" alt="Goods Transport 3">
+                </div>
+            </div>
+        </div>
+        
+        
+    </section>
+
+    <script>
+         const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showNextSlide() {
+        // Hide the current slide
+        slides[currentSlide].style.display = 'none';
+
+        // Update to the next slide
+        currentSlide = (currentSlide + 1) % slides.length;
+
+        // Show the new slide
+        slides[currentSlide].style.display = 'block';
+    }
+
+    // Change slides every 3 seconds
+    setInterval(showNextSlide, 3000);
+    </script>
+    
+</body>
+</html>
